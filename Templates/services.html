@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ICT Academy | Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+</head>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../static/img/bs.jpg);
+        background-size: cover;
+    }
+    .navbar{
+    background-color: rgb(8, 8, 8);
+    padding: 1% 0;
+    font-size: 1.2em;
+   }
+   .control-label{
+       color: aliceblue;
+   }
+   
+</style>
+<script>
+        function validateform(){
+            var name1 = document.forms["nform"]["fname"].value;
+            if(name1 == ""){
+            alert("Please enter the first name");
+            return false;}
+            var name2 = document.forms["nform"]["lname"].value;
+            if(name2 == ""){
+                alert("Please enter the last name");
+                return false;
+            }
+            var email = document.forms["nform"]["Email"].value;
+            if(email == ""){
+                alert("Please enter the email id");
+                return false;
+            }
+            var password = document.forms["nform"]["pass1"].value;
+            if(password == ""){
+                alert("Enter a password");
+                return false;
+            }
+            var confirm = document.forms["nform"]["pass2"].value;
+            if(confirm != password){
+                alert("Password entered don't match");
+                return false;
+            }
+            var phoneno = document.forms["nform"]["phone"].value;
+            if(phoneno == ""){
+                alert("Need a contact number");
+                return false;
+            }
+        }
+</script>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a href="/" class="navbar-brand">ICT Academy of kerala</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu"> 
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item ">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                  <a href="/about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item active">
+                  <a href="/services" class="nav-link">Services</a>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2 " type="search" placeholder="search " aria-label="search">
+            <button class="btn btn-light my-sm-0" type="submit">Search</button>
+
+        </form>
+            </div>
+    </div>
+ </nav>
+ <form class="form-horizontal" name="nform" onsubmit="return validateform()" method="post">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="fname">First Name:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="fname" placeholder="Enter first name">
+          </div>
+        </div>
+        <div class="form-group">
+                <label class="control-label col-sm-2" for="lname">Last Name:</label>
+                <div class="col-sm-4"> 
+                  <input type="text" class="form-control" id="lname" placeholder="Enter last name">
+                </div>
+              </div>
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="Email">Email:</label>
+                  <div class="col-sm-4"> 
+                    <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group">
+                      <label class="control-label col-sm-2" for="pass1">Password:</label>
+                      <div class="col-sm-4"> 
+                        <input type="password" class="form-control" id="pass1" placeholder="Enter password">
+                      </div>
+                </div>
+                <div class="form-group">
+                          <label class="control-label col-sm-2" for="pass2">Re-enter password:</label>
+                          <div class="col-sm-4"> 
+                            <input type="password" class="form-control" id="pass2" placeholder="Enter password again">
+                          </div>
+                </div>
+      
+              <div class="form-group">
+                  <label class="control-label col-sm-2" for="phone">Contact no.:</label>
+                  <div class="col-sm-2"> 
+                    <input type="number" class="form-control" id="phone" placeholder="Enter contact number">
+                  </div>
+              </div>
+              <div class="form-group"> 
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+              </div>
+            </form>
